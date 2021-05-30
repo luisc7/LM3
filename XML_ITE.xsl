@@ -15,6 +15,9 @@
             <xsl:element name="web">
                 <xsl:value-of select="ite/@web"/>
             </xsl:element>
+            <xsl:element name="telf">
+                <xsl:value-of select="ite/telefono"/>
+            </xsl:element>
             <xsl:for-each select="ite/profesores/profesor">
                 <xsl:element name="profesor">
                     <xsl:attribute name="id">
