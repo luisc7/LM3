@@ -241,7 +241,7 @@ caption {
 }
 
 /* Intercambiar filas y columnas de tablas */
-/* https://stackoverflow.com/questions/23556364/how-to-convert-columns-to-rows-using-css/23556911 */
+/* basado en: https://stackoverflow.com/questions/23556364/how-to-convert-columns-to-rows-using-css/23556911 */
 table tr > *{
     display: block;
 }

@@ -7,18 +7,13 @@
                 <meta charset="UTF-8"/>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
                 <link rel="stylesheet" media='screen and (min-width: 901px)'  href="css/stylestd.css"/>
                 <link rel="stylesheet" media='screen and (max-width: 900px)'  href="css/stylemobile.css"/>
-
 
                 <title><xsl:value-of select="ite/@nombre"/></title>
             </head>
 
-            <body class="fondo">
-
-                <!--img src="img/pexels-photo-3769021.webp" class="fondo" alt="fondo_web"/-->
-
+            <body>
                 <header id="cabecera">
                     <img src="img/logo_edix.svg" alt="logo"/>
                     <h1>
@@ -118,37 +113,33 @@
                         <form method="get" action="mailto:midireccion@decorreo.es">
                             <fieldset><legend>¡Pregúntanos!</legend>
                                 <div class="grid-container">
-                                <label for="curso">Elige de qué curso deseas informarte</label>
-                                <select name="curso">
-                                    <xsl:for-each select="ite/ciclos/ciclo">
-                                        <xsl:element name="option">
-                                            <xsl:attribute name="value">
-                                                <xsl:value-of select="@id"/>
-                                            </xsl:attribute>
-                                            <xsl:value-of select="nombre"/>
-                                        </xsl:element>
-                                    </xsl:for-each>
-                                    <option value="otros" selected="selected">Otros (preguntas generales)</option>
-                                </select>
-                                <label for="detalles">Danos más detalles </label>
-                                <input type="text" name="detalles" placeholder="(Opcional)"/>
-                                <label for="email">Correo electrónico de contacto</label>
-                                <input type="email" name="correo" placeholder="Tu email" required="required"/>
-                                <label for="telf">Teléfono de contacto</label>
-                                <input type="tel" name="telf" placeholder="(Opcional)"/>
-                                <div id="blank-space"/>
-                                <input class="button" type="submit" value="Solicitar información"/>
-                            </div>
-                                
-                                
-
+                                    <label for="curso">Elige de qué curso deseas informarte</label>
+                                    <select name="curso">
+                                        <xsl:for-each select="ite/ciclos/ciclo">
+                                            <xsl:element name="option">
+                                                <xsl:attribute name="value">
+                                                    <xsl:value-of select="@id"/>
+                                                </xsl:attribute>
+                                                <xsl:value-of select="nombre"/>
+                                            </xsl:element>
+                                        </xsl:for-each>
+                                        <option value="otros" selected="selected">Otros (preguntas generales)</option>
+                                    </select>
+                                    <label for="detalles">Danos más detalles </label>
+                                    <input type="text" name="detalles" placeholder="(Opcional)"/>
+                                    <label for="email">Correo electrónico de contacto</label>
+                                    <input type="email" name="correo" placeholder="Tu email" required="required"/>
+                                    <label for="telf">Teléfono de contacto</label>
+                                    <input type="tel" name="telf" placeholder="(Opcional)"/>
+                                    <div id="blank-space"/>
+                                    <input class="button" type="submit" value="Solicitar información"/>
+                                </div>
                             </fieldset>
                         </form>
                     </article>
                 </section>
 
-                <footer>
-                </footer>
+                <footer/>
             </body>
         </html>
     </xsl:template>
