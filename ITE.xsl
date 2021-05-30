@@ -8,7 +8,9 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-                <link rel="stylesheet" media="screen" href="css/stylestd.css"/>
+                <link rel="stylesheet" media='screen and (min-width: 901px)'  href="css/stylestd.css"/>
+                <link rel="stylesheet" media='screen and (max-width: 900px)'  href="css/stylemobile.css"/>
+
 
                 <title><xsl:value-of select="ite/@nombre"/></title>
             </head>
@@ -30,6 +32,9 @@
                 </header>
 
                 <nav class="collapsable-menu">
+                    
+                    <input type="checkbox" id="menu"/>
+                    <label for="menu"></label>
                     <div class="menu-content">
                         <ul class="lista-menu">
                             <li class="menulink" id="home"> <a href="index.html">Sobre Edix</a> </li>
@@ -58,10 +63,10 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Denominación</th>
-                                    <th>Nombre</th>
-                                    <th>Tipo de grado</th>
-                                    <th>Año de creación</th>
+                                    <th class="colh1">Denominación</th>
+                                    <th class="colh2">Nombre</th>
+                                    <th class="colh3">Tipo de grado</th>
+                                    <th class="colh4">Año de creación</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -131,8 +136,10 @@
                                 <input type="email" name="correo" placeholder="Tu email" required="required"/>
                                 <label for="telf">Teléfono de contacto</label>
                                 <input type="tel" name="telf" placeholder="(Opcional)"/>
-                            </div>
+                                <div id="blank-space"/>
                                 <input class="button" type="submit" value="Solicitar información"/>
+                            </div>
+                                
                                 
 
                             </fieldset>

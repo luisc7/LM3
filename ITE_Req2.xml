@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="ITE.xsl"?>
+<!--?xml-stylesheet type="text/xsl" href="ITE.xsl"?-->
+<?xml-stylesheet type="text/xsl" href="XML_ITE.xsl"?>
 <ite nombre="Instituto Tecnológico Edix" web="https://institutotecnologico.edix.com">
 
     <empresa>Proeduca</empresa>
